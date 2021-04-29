@@ -1,0 +1,253 @@
+*{
+	/*To remove all borders and margins and create a "clean slate"*/
+	margin: 0;
+	padding:0;
+	font-family: 'Lato', sans-serif;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+.background{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(250, 250, 250);
+}
+
+.nav{
+	/*General stylistic choices for nav bar*/
+	width: 300px;
+	height: auto;
+	position: absolute;
+	top: 20%;
+	left: 0;
+}
+
+.nav a{
+	/*For tabs in general*/
+	text-decoration: none;
+
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 90px;
+
+	height: 90px;
+	margin: 20px 0;
+	float: left;
+
+	display: inline-block;
+
+	background-color: rgb(7, 104, 159);
+	color: white;
+	opacity: 0.9;
+
+
+	/*Got the transition idea from a w3school*/
+	transition: 300ms;
+}
+
+
+a.active, .nav a:hover{
+	/*For selected tabs, or tabs that the mouse hovers over*/
+	background-color: rgb(162, 213, 242);
+	color: white;
+	width: 100%;
+}
+
+
+/*These two are here for overriding purposes since I had run into some issues
+(must be something to do with the js code)*/
+
+a.projButton{
+	display: inline-block;
+	margin-left: 5%;
+
+	font-weight: 100;
+	font-size: 15px;
+	text-align: center;
+
+	color: white;
+	background-color: rgb(255, 126, 103);
+
+	border: solid 2px rgb(255, 126, 103);
+	border-radius: 50px;
+
+	padding: 5px 20px;
+
+	transition-duration: 300ms; 
+}
+
+a.docButton{
+	display: inline-block;
+	margin-left: 5%;
+
+	font-weight: 100;
+	font-size: 15px;
+	text-align: center;
+
+	color: white;
+	background-color: rgb(255, 126, 103);
+
+	border: solid 2px rgb(255, 126, 103);
+	border-radius: 50px;
+
+	padding: 5px 20px;
+
+	transition-duration: 300ms; 
+}
+
+
+/*These are simply for the width of the tab prior to it expanding with the the hover*/
+.a {
+	width: 70%;
+}
+
+.b{
+	width: 70%;
+}
+
+.c{
+	width: 70%;
+}
+
+
+/*How far out the content box can go, keeps everything alligned*/
+.content{
+	position: absolute;
+	right: 0;
+	top: 5%;
+
+	width: 1200px;
+	min-height: 500px;
+	height: auto;
+}
+
+
+/*All details regarding to the home page*/
+.home{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: rgb(255, 126, 103);
+}
+
+.home h1{
+	font-size: 90px;
+	text-transform: uppercase;
+	padding-right: 90px;
+	border-bottom: 1px solid rgb(255, 126, 103);
+}
+
+.home h3{
+	font-size: 26px;
+	padding: 5px 0;
+	opacity: 0.6;
+}
+
+
+/*All details regarding the about page*/
+.aboutPage{
+	width: 70%;
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 10%;
+	color: rgb(255, 126, 103);
+	padding: 0 60px;
+}
+
+.aboutPage p{
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 16px;
+}
+
+.aboutPage ol{
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 16px;	
+}
+
+
+/*All details regarding the Project page*/
+.projects{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 10;
+	padding: 0 60px;
+}
+
+
+.projects .assignments{
+	margin: 4% 5%;
+	float: right;
+}
+
+.assignments{
+	width: 350px;
+	height: 270px;
+	background-color: rgb(250, 250, 250);
+	border: solid 1px rgb(255, 126, 103);
+}
+
+img{
+	width: 350px;
+	height: 170px;
+	padding: 20px 10px;
+}
+
+
+/*All details regarding the buttons found on the project page*/
+a{
+	text-decoration: inherit;
+}
+
+.projButton, .docButton{
+	display: inline-block;
+	margin-left: 5%;
+
+	font-weight: 100;
+	font-size: 15px;
+	text-align: center;
+
+	color: white;
+	background-color: rgb(255, 126, 103);
+
+	border: solid 2px rgb(255, 126, 103);
+	border-radius: 50px;
+
+	padding: 5px 20px;
+
+	transition-duration: 300ms; 
+}
+
+.projButton{
+	max-width: 80px;
+}
+
+.docButton{
+	max-width: 120px;
+}
+
+.projButton:hover, .docButton:hover{
+	background-color: white;
+	color: rgb(255, 126, 103);
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Portfolio Website </title>
+
+	<!-- Font link -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="background">
+
+	<!-- Elements for navigation bar -->
+	<div class="nav">
+		<a class="a active" href="#">HOME</a>
+		<a class="b" href="#">ABOUT</a>
+		<a class="c" href="#">PROJECTS</a>
+	</div>
+
+	<div class="content">
+		<!-- Divided into the content of the three tabs in the nav bar -->
+
+		<div class="home">
+			<h1>Aalya Sharaf</h1>
+			<h3>Communications Lab Spring 2021 Projects</h3>
+		</div>
+
+		<div class="aboutPage">
+			<h3>About</h3>
+			<p>
+				In this website, you will find all the links to the projects that were done during the semester. These projects are a combination of group work as well as individual work, and have all been developed over the span of 14 weeks. <br>
+			</p><br>
+			<h3>Projects</h3>
+				<ol>
+					<li>For the first project, we had the task of designing a website for our 30 Minute Film Festival. During class time, we were given 30 minutes to film and edit a short video, and based off of that, we had our first assignment.</li>
+					<li>In our second project, we had to deal with comics. We had to make an interactive comic using software such as Adobe Illustrator/Adobe Photoshop to create the content. Our project was a very funky twist on mad libs...</li>
+					<li>For our third project, we delved into the world of sound. The aim of the project was to create a sound piece that takes us on a journey and implement it in the form of a website. This has to be one of my favorite pieces, as it follows the story of a shipwreck, and the lure of the sirens...</li>
+					<li>Finally, the film project. The premise was simple, create a video based story that lives on a webpage, with the added element of interactivity. Our story follows a young boy, and how his words took a journey through time...</li>
+				</ol><br>
+			<h3>Documentation</h3>
+			<p>
+				As well as links to the different websites, you will find a link to the corresponding website's documentation. The documentation gives a behind-the-scenes look into the website's development. It entails the different steps taken in the creation of the project as well as the different stages the website went through in order to reach its current state.
+			</p><br>
+
+		</div>
+
+		<div class="projects">
+
+			<div class="assignments">
+				<img src="images/proj-2.png">
+				<a href="https://deborah-74.github.io/web-comic/" class="projButton" target="_blank">PROJECT 2</a>
+				<a href="https://docs.google.com/document/d/1TCSNwRjMyo42pJu6MV8Nr_fR16fwzkIQXVj9tzQzyPQ/edit" class="docButton" target="_blank">DOCUMENTATION</a>
+			</div>
+
+			<div class="assignments">
+				<img src="images/proj-1.png">
+				<a href="https://aalyasharaf.github.io/" class="projButton" target="_blank">PROJECT 1</a>
+				<a href="https://docs.google.com/document/d/1AXWk_4lx39WoklLLiY3agmk37jxDOL7j/edit" class="docButton" target="_blank">DOCUMENTATION</a>
+			</div>
+
+			<div class="assignments">
+				<img src="images/proj-4.png">
+				<a href="https://shammakm.github.io/Movie/" class="projButton" target="_blank">PROJECT 4</a>
+				<a href="https://www.notion.so/Assignment-4-Documentation-79d0b508926a41998639ffa63ef83bdf" class="docButton" target="_blank">DOCUMENTATION</a>
+			</div>
+
+			<div class="assignments">
+				<img src="images/proj-3.png">
+				<a href="https://lm-rawr.github.io/main.html#/" class="projButton" target="_blank">PROJECT 3</a>
+				<a href="https://www.notion.so/Documentation-837005c6ac1a40688689a8c59bee7988" class="docButton" target="_blank">DOCUMENTATION</a>
+			</div>
+
+		</div>
+	</div>
+
+
+<!-- For the Javascript, I followed a tutorial... Relied on it for figuring out the first part of the website, then tried to do the rest without relying on it.	 -->	
+
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	
+	// Controls the tabs on the side and activates them based on which one I'm clicking.
+	$(document).ready(function(){
+		$('a').click(function(){
+			// alert("You are clicking");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		//This is for the content of the tabs. The purpose is so that only the information specified for that tab shows up. It hides all the information that is not necessary for that specific tab as well as displays the info that is relevant to it. 
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$home = $('.home'),
+		$aboutPage = $('.aboutPage'),
+		$projects = $('.projects');
+
+		$a.click(function(){
+			$home.fadeIn();
+			$aboutPage.fadeOut();
+			$projects.fadeOut();
+		});
+
+		$b.click(function(){
+			$home.fadeOut();
+			$aboutPage.fadeIn();
+			$projects.fadeOut();
+		});
+
+		$c.click(function(){
+			$home.fadeOut();
+			$aboutPage.fadeOut();
+			$projects.fadeIn();
+		});
+
+	});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
